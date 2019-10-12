@@ -14,13 +14,15 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "mocha --exit test/*.test.js"
+    "test": "mocha --exit test/*.test.js",
+    "build": "shadow-cljs release function"
   },
   "dependencies": {
     "express": "^4.16.3"
   },
   "devDependencies": {
     "mocha": "^6.1.4",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "shadow-cljs": "2.8.62"
   }
 }

@@ -1,12 +1,13 @@
 steps:
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['install']
+  - name: 'maven'
+    entrypoint: 'bash'
+    args: ['./install_npm.sh']
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
      - beta
      - functions
      - deploy
      - sayHello
-     - --source=.
+     - --source=./function
      - --runtime=nodejs8
      - --trigger-http

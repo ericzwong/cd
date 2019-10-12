@@ -1,0 +1,15 @@
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ []
+
+ :builds
+    {:function
+      {:target :node-library
+      :exports {:sayHello my-twilio-function/my-function}
+      :output-to "function/index.js"
+      :compiler-options {:optimizations :advanced}}}}
+
